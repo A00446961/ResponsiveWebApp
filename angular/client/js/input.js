@@ -6,17 +6,17 @@ var name = $("#name").val();
 
     
     if (name == '') {
-        alert("Please enter the name of the university!");
+        alert("Enter University Name to be searched");
         $("#name").focus();
         return false;
     }
     if (address == '') {
-        alert("Please enter the address of the university!");
+        alert("Enter Contact Address of University");
         $("#address").focus();
         return false;
     }
     if (phone == '') {
-        alert("Please enter the phone number of the university!");
+        alert("Enter Contact Info of the university!");
         $("#phone").focus();
         return false;
     }
@@ -24,7 +24,7 @@ var name = $("#name").val();
 
     for (var i = 0; i < tokens.length; i++) {
         if (isNaN(tokens[i])) {
-            alert("Please use only numbers or hyphens!");
+            alert("Use only Phone numbers or -.  () Not allowed");
             $("#phone").focus();
             return false;
         }
@@ -37,7 +37,7 @@ var name = $("#name").val();
         return false;
     }
     if (validCharForStreetAddress(address)) {
-        alert("Address should contain letters!");
+        alert("Address not valid. Enter complete address with street number and streert name");
         $("#address").focus();
         return false;
     }
@@ -68,7 +68,7 @@ function validCharForStreetAddress(c) {
 function remove(){
 var name = $("#name").val();
 if (name == '') {
-        alert("Please enter the name of the university!");
+        alert("Enter University Name");
         $("#name").focus();
         return false;
     }
@@ -81,7 +81,7 @@ if(data['n']==0){
 alert("Record Not Found");
 }
 else{
-alert("Record deleted");
+alert("Record has been deleted");
 }
         });
 
@@ -116,7 +116,7 @@ if (name == '') {
                             var table = document.getElementById('displayTable');
             var universities = (data);
             if(universities.length==0){
-                    alert("University is not present")
+                    alert("University record not found")
             return;
             }
             
@@ -137,7 +137,7 @@ if (name == '') {
                             var table = document.getElementById('displayTable');
             var universities = (data);
     if(universities.length==0){
-    alert("University is not present")
+    alert("University record not found")
     return;
     }
             
