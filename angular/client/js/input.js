@@ -81,7 +81,7 @@ if(data['n']==0){
 alert("Record Not Found");
 }
 else{
-alert("Record has been deleted");
+alert("Record deleted successfully");
 }
         });
 
@@ -104,7 +104,7 @@ if(ele.id=="0"){
 var name = $("#search").val();
 console.log("tables")
 if (name == '') {
-        alert("Please enter the name of the university!");
+        alert("Enter University name");
         $("#name").focus();
         return false;
     }
